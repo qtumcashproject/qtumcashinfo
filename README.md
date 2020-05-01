@@ -1,5 +1,5 @@
 # qtumcashinfo
 
-[API documentation](https://github.com/Blockchain-Solutions-QTH/qtumcashinfo-api/blob/master/README.md)
+[API documentation](https://github.com/qtumcashproject/qtumcashinfo-api/blob/master/README.md)
 
-[Deploy documentation](https://github.com/Blockchain-Solutions-QTH/qtumcashinfo/blob/master/doc/deploy.md)
+[Deploy documentation](https://github.com/qtumcashproject/qtumcashinfo/master/doc/deploy.md)
