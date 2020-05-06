@@ -1,7 +1,7 @@
 const path = require('path')
 const Node = require('../node')
 
-class QTHNode {
+class QtumCashNode {
   #path = null
   #config = null
   #node = null
@@ -24,7 +24,7 @@ class QTHNode {
       services
     })
     this.registerExitHandlers()
-    this.#node.on('ready', () => this.logger.info('QTHinfo Node ready.'))
+    this.#node.on('ready', () => this.logger.info('QtumCashinfo Node ready.'))
     this.#node.on('error', err => this.logger.error(err))
     this.#node.start().catch(err => {
       this.logger.error('Failed to start services')
@@ -68,4 +68,4 @@ class QTHNode {
   }
 }
 
-module.exports = QTHNode
+module.exports = QtumCashNode

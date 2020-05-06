@@ -2,7 +2,7 @@ const path = require('path')
 const Liftoff = require('liftoff')
 const program = require('commander')
 const packageJson = require('../../package.json')
-const QTHNode = require('./node')
+const QtumCashNode = require('./node')
 
 process.on('unhandledRejection', reason => console.error(reason))
 
@@ -30,14 +30,14 @@ liftoff.launch({cwd: process.cwd}, () => {
   program
     .command('start')
     .description('Start the current node')
-    .option('-c, --config <dir>', 'Specify the directory with QTHinfo Node configuration')
+    .option('-c, --config <dir>', 'Specify the directory with QtumCashinfo Node configuration')
     .action(async cmd => {
       let config = require(path.resolve(
         process.cwd(),
         ...cmd.config ? [cmd.config] : [],
         'qtumcashinfo-node.json'
       ))
-      let node = new QTHNode({path: process.cwd(), config})
+      let node = new QtumCashNode({path: process.cwd(), config})
       await node.start()
     })
 

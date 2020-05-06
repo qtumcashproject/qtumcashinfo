@@ -16,7 +16,7 @@ class Logger {
   }
 
   debug(...args) {
-    if (process.env.QTHINFO_ENV === 'debug') {
+    if (process.env.QTUMCASHINFO_ENV === 'debug') {
       this._log('green', 'debug', ...args)
     }
   }
